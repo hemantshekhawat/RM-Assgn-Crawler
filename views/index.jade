@@ -1,0 +1,31 @@
+extends layout
+
+block content
+    div(class="container")
+        div(class='page-header col-xs-offset-2')
+        h1= title
+
+        form(action='/', method='post' class='form-horizontal multiple-form-group')
+            div(class='form-group')
+                label(for='webSite') WebSite Name
+                input(name="webSite" class="form-control", id='webSite', type='text',autofocus="autofocus", value='', placeholder=' Ex: https://medium.com', required='required')
+
+            div(class='form-group')
+                label(for='userAgent') User Agent #Default is 'my-bot/crawler"
+                input(name="userAgent" class="form-control", type='text',value='',placeholder='Mention the user Agent for crawl requests')
+
+            div(class='form-group')
+                label(for='maxConcurrentRequest') Max Concurrent Request #Deafult: 5
+                input(name="maxConcurrentRequest" class="form-control", id='maxConcurrentRequest',min=1, max=10, type='number',value='',placeholder='Enter the max number of Concurrent Requests per second')
+
+            div(class='form-group')
+                label(for='maxReqsPerSec') Max Requests/Second #Deafult: 5
+                input(name="maxReqsPerSec" class="form-control", id='maxReqsPerSec',type='number',min=1, max=10,value='',placeholder='Enter the max number of Requests per second')
+
+            div(class='form-group checkbox')
+                label(for='ignoreRelative') Do you want to ignore Relative URLs ?
+                input( class="", id='ignoreRelative', type='checkbox')
+
+            div(class="form-group")
+                input(type='submit' , class="btn btn-primary", value='Start Crawling',data-transition='fade', data-theme='c')
+

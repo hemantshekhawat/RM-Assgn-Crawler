@@ -1,0 +1,19 @@
+extends layout
+
+block content
+    div(class="container")
+        div(class='page-header col-xs-offset-2')
+        h1= title
+
+        if isCrawling == true && inputContext != null
+            h4 Input Context
+
+            ul#Contexts
+                each input, i in inputContext
+                    li #{i}: #{input}
+
+
+            p
+                a(href='#{downloadLink}') Download CSV
+        else
+            p Nothing here !
