@@ -1,6 +1,4 @@
-#RM - Assignment task for crawling website Links
-
-## RentoMojo-Assignment
+# RM-Assignment Crawler
 
 ### Requirement
 #### Problem Statement:
@@ -21,4 +19,22 @@ You need to,
 
 
 
-### Solution
+## Solution
+
+
+
+
+### Execution
+
+* Clone the repository  
+    `git clone https://github.com/hemantshekhawat/RM-Assgn-Crawler.git`
+* Run NPM Install  
+    `npm install`
+* Execute the Node JS Server on local environment  
+    `npm start`
+* Open localhost URL in browser   
+    `http://localhost:3300`
+* Fill up the details required by the Crawler to start execution  
+    `Website Name` `User Agent` `Max Concurrent Request` `Max Requests per Second`
+    `Ignore the relative URLs or not`
+* After form post, you get a Context page which share the details posted and gives option to download the `CSV` file with the latest crawled URLs 
